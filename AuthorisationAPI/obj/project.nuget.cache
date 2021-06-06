@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5yKraDX/xBAmT36vcLG0xg5aBhLn8h3ceStjyJqOCCS7N+rtfDIkyUFKQjcU8l8qU/FpG3gR714uXIcdext4TA==",
+  "dgSpecHash": "hwMERWmEdgBMdxtnAwXbrdb1OoB0NmBfb4h0cThbdzJLQKfncIy0018nXeC23wM68QEWVDyu7uXnomDpO6Z+7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Freaqke\\Desktop\\S6-individueel\\AuthorisationAPI\\AuthorisationAPI\\AuthorisationAPI.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Freaqke\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Freaqke\\.nuget\\packages\\mysql.data\\8.0.25\\mysql.data.8.0.25.nupkg.sha512",
