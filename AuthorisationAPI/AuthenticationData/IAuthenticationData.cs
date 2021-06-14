@@ -8,6 +8,6 @@ namespace AuthorisationAPI.AuthenticationData
 {
     public interface IAuthenticationData
     {
-        bool AuthenticateUser(User user);
+        User AuthenticateUser(User user);
     }
 }

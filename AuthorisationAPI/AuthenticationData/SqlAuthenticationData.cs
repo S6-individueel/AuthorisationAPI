@@ -14,16 +14,17 @@ namespace AuthorisationAPI.AuthenticationData
         {
             _usersContext = usersContext;
         }
-        public bool AuthenticateUser(User user)
+        public User AuthenticateUser(User user)
         {
             foreach (var existingUser in _usersContext.Users.Where(r => r.Email == user.Email))
             {
-                if(existingUser.Password == user .Password)
+                if(existingUser.Password == user.Password)
                 {
-                    return true;
+                    user.Id = existingUser.Id;
+                    return user;
                 }             
             }
-            return false;
+            return null;
         }
     }
 }

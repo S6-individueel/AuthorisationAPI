@@ -27,19 +27,20 @@ namespace AuthorisationAPI.Controllers
             _config = config;
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Authenticate(User user)
         {
             var audienceConfig = _config.GetSection("Audience");
             var authenticated = _authenticationData.AuthenticateUser(user);
-            if(authenticated != false)
+            if (authenticated != null)
             {
                 var now = DateTime.UtcNow;
 
                 var claims = new Claim[]
                 {
-        /*    new Claim(JwtRegisteredClaimNames.Sub, name),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),*/
+          /*  new Claim(JwtRegisteredClaimNames.Sub, name),*/
+              new Claim("id", authenticated.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, authenticated.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.Iat, now.ToUniversalTime().ToString(), ClaimValueTypes.Integer64)
                 };
 
@@ -73,9 +74,11 @@ namespace AuthorisationAPI.Controllers
                     expires_in = (int)TimeSpan.FromHours(24).TotalHours
                 };
 
+              /*  var tokenId = jwt.Claims.First(x => x.Type == "id").Value;*/
+
                 return Ok(responseJson);
             }
-                return NotFound($"User was not found, check email and password");          
+            return NotFound($"User was not found, check email and password");
         }
     }
 }

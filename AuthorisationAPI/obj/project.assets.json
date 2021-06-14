@@ -598,6 +598,20 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
+      "Pomelo.EntityFrameworkCore.MySql/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "[5.0.5, 6.0.0)",
+          "Microsoft.Extensions.DependencyInjection": "5.0.1",
+          "MySqlConnector": "1.3.7"
+        },
+        "compile": {
+          "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2779,6 +2793,20 @@
         "newtonsoft.json.10.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Pomelo.EntityFrameworkCore.MySql/5.0.0": {
+      "sha512": "5T1c5sjnzhryUwD647l209Fsvhfzu1R5vS9G26HuT6T8tEtli9xTBJInge+17Cqy2Q2XTYug+vVfTk3gNH5Zjw==",
+      "type": "package",
+      "path": "pomelo.entityframeworkcore.mysql/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.dll",
+        "lib/netstandard2.1/Pomelo.EntityFrameworkCore.MySql.xml",
+        "pomelo.entityframeworkcore.mysql.5.0.0.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -6451,6 +6479,7 @@
       "MySql.Data >= 8.0.25",
       "MySql.EntityFrameworkCore >= 5.0.3.1",
       "MySqlConnector >= 1.3.9",
+      "Pomelo.EntityFrameworkCore.MySql >= 5.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -6526,6 +6555,10 @@
           "MySqlConnector": {
             "target": "Package",
             "version": "[1.3.9, )"
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
