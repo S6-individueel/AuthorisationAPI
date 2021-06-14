@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '43b6510f-f665-4647-be93-a53b4216c1c8'
-  imageRepository: 'sindividueelauthorisationapi'
+  imageRepository: 'authorisationapi'
   containerRegistry: 'acrvod.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/AuthorisationAPI/Dockerfile'
   tag: '$(Build.BuildId)'
