@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authorisationapi
+  labels: 
+    app: authorisationapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authorisationapi
+  template:
+    metadata:
+      labels:
+        app: authorisationapi
+    spec:
+      containers:
+      - name: authorisationapi
+        image: acrvod.azurecr.io/authorisationapi:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 80
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development
+          - name: MYSQL_DBCONNECTION
+            value: Server=mysql;Port=3306;Database=userdb;Uid=root;Pwd=Mofo121191!;
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "0.1"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+      imagePullSecrets:
+        - name: acr-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: authorisationapi
+  labels:
+    app: authorisationapi
+spec:
+  selector:
+    app: authorisationapi
+  ports:
+  - protocol: TCP
+    port: 80
+
+
